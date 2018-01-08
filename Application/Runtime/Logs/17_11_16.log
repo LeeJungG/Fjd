@@ -1,0 +1,9 @@
+[ 2017-11-16T21:13:13+08:00 ] 127.0.0.1 /index.php/Admin/Index/goodsAdd.html
+ERR: 非法操作:goodsAdd
+
+[ 2017-11-16T21:25:08+08:00 ] 127.0.0.1 /index.php/Admin/Index/__GROUP__/User/userList
+ERR: 非法操作:__GROUP__
+
+[ 2017-11-16T21:25:09+08:00 ] 127.0.0.1 /index.php/Admin/Index/__GROUP__/Index/main
+ERR: 非法操作:__GROUP__
+

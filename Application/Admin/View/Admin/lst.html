@@ -1,0 +1,71 @@
+<layout name="Index/header_footer" />
+<div class="form-div search_form_div">
+    <form method="GET" name="search_form">
+		<p>
+			用户名：
+	   		<input type="text" name="admin_name" size="30" value="<?php echo I('get.admin_name'); ?>" />
+		</p>
+		<p>
+			是否启用：
+			<input type="radio" value="-1" name="is_use" <?php if(I('get.is_use', -1) == -1) echo 'checked="checked"'; ?> /> 全部 
+			<input type="radio" value="1" name="is_use" <?php if(I('get.is_use', -1) == '1') echo 'checked="checked"'; ?> /> 启用 
+			<input type="radio" value="0" name="is_use" <?php if(I('get.is_use', -1) == '0') echo 'checked="checked"'; ?> /> 禁用 
+		</p>
+		<p><input type="submit" value=" 搜索 " class="button" /></p>
+    </form>
+</div>
+<!-- 列表 -->
+<div class="list-div" id="listDiv">
+	<table cellpadding="3" cellspacing="1">
+    	<tr>
+            <th >用户名</th>
+            <th >密码</th>
+            <th >是否启用</th>
+			<th width="60">操作</th>
+        </tr>
+		<?php foreach ($data as $k => $v): ?>            
+			<tr class="tron">
+				<td><?php echo $v['admin_name']; ?></td>
+				<td><?php echo $v['admin_password']; ?></td>
+				<td admin_id="{$v.admin_id}" class="is_use" ><?php echo $v['is_use']==1 ? '启用' : '禁用'; ?></td>
+		        <td align="center">
+		        	<a href="<?php echo U('edit?admin_id='.$v['admin_id'].'&p='.I('get.p')); ?>" title="编辑">编辑</a> 
+					<?php if($v['admin_id'] != 1): ?>
+		        	|
+	                <a href="<?php echo U('delete?admin_id='.$v['admin_id'].'&p='.I('get.p')); ?>" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+	            <?php endif; ?>
+		        </td>
+	        </tr>
+        <?php endforeach; ?> 
+		<?php if(preg_match('/\d/', $page)): ?>  
+        <tr><td align="right" nowrap="true" colspan="99" height="30"><?php echo $page; ?></td></tr> 
+        <?php endif; ?> 
+	</table>
+</div>
+<script>
+$('.is_use').click(function(){
+	//先获取点击的admin_id
+	var admin_id = $(this).attr("admin_id");
+	if(admin_id == 1){
+		alert('超级管理员不能修改');
+		return false;
+	}
+	var _this = $(this);
+	$.ajax({
+		//使用什么方式传
+		type : "GET",
+		//默认U函数的地址是带.html后缀的:/index.php/Admin/Admin/ajaxUpdateIsuse.html/admin_id/3,这样会报错
+		//所有需要认U生成的地址不带.html
+		//在使用ajax的时候使用U函数需要设置第三个参数为false不生成.html后缀
+		url : "<?php echo U('ajaxUpdateIsuse','',false); ?>/admin_id/"+admin_id,
+
+		success : function (data){
+				if(data == 0)
+					_this.html("禁用");
+				else
+					_this.html("启用");
+
+			}
+		});
+});
+</script>

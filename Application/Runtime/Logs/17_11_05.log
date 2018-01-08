@@ -1,0 +1,21 @@
+[ 2017-11-05T14:52:41+08:00 ] 127.0.0.1 /index.php/Admin/Goods/index
+ERR: Think\Model:search方法不存在！
+
+[ 2017-11-05T14:55:05+08:00 ] 127.0.0.1 /index.php/Admin/Goods/index
+ERR: Think\Model:search方法不存在！
+
+[ 2017-11-05T14:55:07+08:00 ] 127.0.0.1 /index.php/Admin/Goods/index
+ERR: Think\Model:search方法不存在！
+
+[ 2017-11-05T14:55:49+08:00 ] 127.0.0.1 /index.php/Admin/Goods/index
+ERR: Think\Model:search方法不存在！
+
+[ 2017-11-05T14:56:30+08:00 ] 127.0.0.1 /index.php/Admin/Goods/index
+ERR: Think\Model:search方法不存在！
+
+[ 2017-11-05T14:56:46+08:00 ] 127.0.0.1 /index.php/Admin/Goods/index
+ERR: Think\Model:search方法不存在！
+
+[ 2017-11-05T21:45:00+08:00 ] 127.0.0.1 /index.php/Admin/Goods/index/p/1/start_price/6.html?p=1&goods_name=&start_price=6&end_price=
+ERR: 表达式错误:eqt
+

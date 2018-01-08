@@ -1,0 +1,125 @@
+<layout name="Index/header_footer" />
+<div class="main-div">
+    <form name="main_form" method="POST" action="__SELF__" enctype="multipart/form-data" >
+    	<input type="hidden" name="cat_id" value="<?php echo $data['cat_id']; ?>" />
+        <table cellspacing="1" cellpadding="3" width="100%">
+			<tr>
+				<td class="label">上级权限：</td>
+				<td>
+					<select name="parent_id">
+						<option value="0">顶级权限</option>
+						<?php foreach ($parentData as $k => $v): ?> 
+						<?php if($v['cat_id'] == $data['cat_id'] || in_array($v['cat_id'], $children)) continue ; ?> 
+						<option <?php if($v['cat_id'] == $data['parent_id']): ?>selected="selected"<?php endif; ?> value="<?php echo $v['cat_id']; ?>"><?php echo str_repeat('-', 8*$v['level']).$v['cat_name']; ?></option>
+						<?php endforeach; ?>					</select>
+				</td>
+			</tr>
+            <tr>
+                <td class="label">分类名称：</td>
+                <td>
+                    <input  type="text" name="cat_name" value="<?php echo $data['cat_name']; ?>" />
+                </td>
+            </tr>
+              <tr>
+                <td class="label">筛选属性：</td>
+                <td>
+                    <ul>
+                    <?php if($searchAttrData): ?>
+                        <?php foreach ($searchAttrData as $k1 => $v1):
+                        if($k1 == 0)
+                            $op = "[+]";
+                        else
+                            $op = "[-]";
+                        ?>
+                        <li>
+                        <a href="javascript:void(0);" onclick="addNed(this);">{$op}</a>
+                            <select name="type_id[]">
+                                <option value="">-请选择类型-</option>
+                                <?php foreach ($typeM as $k => $v):
+                                    if($v['type_id'] == $v1['type_id'])
+                                        $selected = 'selected="selected"';
+                                    else
+                                        $selected = '';
+                                ?>
+                                <option {$selected} value="{$v.type_id}">{$v.type_name}</option>
+                                <?php endforeach;?>
+                            </select>
+
+                            <select attr_id="{$v1.attr_id}" name="attr_id[]">
+                                <option>-请选择属性-</option>
+                            </select>
+                        </li>
+                        <?php endforeach;?>                    
+                    <?php else: ?>
+                        <li>
+                        <a href="javascript:void(0);" onclick="addNed(this);">[+]</a>
+                            <select name="type_id[]">
+                                <option value="">-请选择类型-</option>
+                                <?php foreach ($typeM as $k => $v):?>
+                                <option value="{$v.type_id}">{$v.type_name}</option>
+                                <?php endforeach;?>
+                            </select>
+
+                            <select name="attr_id[]">
+                                <option>-请选择属性-</option>
+                            </select>
+                        </li>
+                    <?php endif;?>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script>
+$("select[name='type_id[]']").change(function(){
+
+    var _this = $(this);
+    var typeid = $(this).val();
+    var opt = "<option value=''>选择属性</option>";
+    if(typeid != "")
+    {
+        $.ajax({
+            type : "GET",
+            url : "<?php echo U('Admin/Goods/ajaxGetAttr','',false);?>/type_id/"+typeid,
+            dataType : "json",
+            success : function(data)
+            {
+                //从属性的下拉框上取出这个下拉框应该选中的属性
+                var attrid = _this.next("select").attr("attr_id");
+
+                $(data).each(function(k,v){
+                    if(v.attr_id == attrid)
+                        var sel = 'selected="selected"';
+                    else
+                        var sel = '';
+                    opt += "<option "+sel+" value='"+v.attr_id+"'>"+v.attr_name+"</option>";
+                });
+                _this.next("select").html(opt);
+            }
+        });
+    }else
+    _this.next("select").html(opt);
+});
+
+function addNed(a)
+{
+    var li = $(a).parent();
+    if($(a).html() == "[+]")
+    {
+        var newbel = li.clone(true);
+        newbel.find("a").html("[-]");
+        li.after(newbel);
+
+    }else
+    li.remove();
+}
+// 直接触AJAX事件取出属性
+$("select[name='type_id[]']").trigger("change");
+</script>

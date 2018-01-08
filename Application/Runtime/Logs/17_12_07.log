@@ -1,0 +1,158 @@
+[ 2017-12-07T10:25:08+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '1' )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T10:25:49+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '1' )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T10:26:24+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '1' )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T10:27:15+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '4' )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T10:28:05+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '1' )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T10:28:25+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '1' )  [ RunTime:0.010000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T11:24:21+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '4' )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T11:39:53+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '2' )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T11:39:56+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '3' )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T11:39:59+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '1' )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T11:41:48+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '1' )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T11:42:26+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '1' )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T11:42:50+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxGetAttr/type_id/4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxGetAttr" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_attribute` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `jd_attribute` WHERE ( `type_id` = '4' )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-07T14:10:29+08:00 ] 127.0.0.1 /index.php/Admin/Goods/recyclelst.html
+ERR: 非法操作:recyclelst
+
+[ 2017-12-07T15:27:19+08:00 ] 127.0.0.1 /index.php/Admin/Goods/ajaxDelImage/prcs_id/32
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select count(*) hes from jd_privilege where module_name="Admin" AND controller_name="Goods" AND action_name="ajaxDelImage" [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `jd_goods_prcs` [ RunTime:0.003000s ]
+SQL: SELECT `prcs_pic`,`sm_prcs_pic` FROM `jd_goods_prcs` WHERE ( `prcs_id` = 32 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: DELETE FROM `jd_goods_prcs` WHERE ( `prcs_id` = 32 ) [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

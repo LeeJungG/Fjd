@@ -1,0 +1,9 @@
+[ 2017-11-12T22:00:14+08:00 ] 127.0.0.1 /index.php/Admin/Goods/edit/goods_id/2/p/1.html
+ERR: Think\Controller:find方法不存在！
+
+[ 2017-11-12T22:01:02+08:00 ] 127.0.0.1 /index.php/Admin/Goods/edit/goods_id/2/p/1.html
+ERR: Think\Controller:find方法不存在！
+
+[ 2017-11-12T22:04:19+08:00 ] 127.0.0.1 /index.php/Admin/Goods/edit/goods_id/2/p/1.html
+ERR: 模板不存在:./Application/Admin/View/Goods/edit.html
+

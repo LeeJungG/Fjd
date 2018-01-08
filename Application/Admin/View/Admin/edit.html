@@ -1,0 +1,48 @@
+<layout name="Index/header_footer" />
+<div class="main-div">
+    <form name="main_form" method="POST" action="__SELF__" enctype="multipart/form-data" >
+    	<input type="hidden" name="admin_id" value="<?php echo $data['admin_id']; ?>" />
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">用户名：</td>
+                <td>
+                    <input  type="text" name="admin_name" value="<?php echo $data['admin_name']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">密码：</td>
+                <td>
+                    <input  type="text" name="admin_password" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">是否启用：</td>
+                <td>
+                	<input type="radio" name="is_use" value="1" <?php if($data['is_use'] == '1') echo 'checked="checked"'; ?> />启用 
+                	<input type="radio" name="is_use" value="0" <?php if($data['is_use'] == '0') echo 'checked="checked"'; ?> />禁用 
+                </td>
+            </tr>
+             <tr>
+                <td class="label">所在角色:</td>
+                <td>
+                    <?php foreach ($role as $k => $v):
+                    if(strpos(','.$arole.',',','.$v['role_id'].',') !== false)
+                            $kjl = 'checked="checked"';
+                            else
+                                $kjl = '';
+                    ?>
+                    <input {$kjl} type="checkbox" name="role_id[]" value="{$v.role_id}" />{$v.role_name}
+                    <?php endforeach; ?>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script>
+</script>

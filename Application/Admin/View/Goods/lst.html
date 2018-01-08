@@ -1,0 +1,98 @@
+<layout name="Index/header_footer" />
+<!-- 搜索 -->
+<div class="form-div search_form_div">
+    <form method="GET" name="search_form">
+		<p>
+			商品名称：
+	   		<input type="text" name="goods_name" size="30" value="<?php echo I('get.goods_name'); ?>" />
+		</p>
+		<p>
+			主分类的id：
+	   		<input type="text" name="cat_id" size="30" value="<?php echo I('get.cat_id'); ?>" />
+		</p>
+		<p>
+			品牌的id：
+	   		<input type="text" name="brand_id" size="30" value="<?php echo I('get.brand_id'); ?>" />
+		</p>
+		<p>
+			本店价：
+	   		从 <input id="jd_pricefrom" type="text" name="jd_pricefrom" size="15" value="<?php echo I('get.jd_pricefrom'); ?>" /> 
+		    到 <input id="jd_priceto" type="text" name="jd_priceto" size="15" value="<?php echo I('get.jd_priceto'); ?>" />
+		</p>
+		<p>
+			是否热卖：
+	   		<input type="text" name="is_hot" size="30" value="<?php echo I('get.is_hot'); ?>" />
+		</p>
+		<p>
+			是否新品：
+	   		<input type="text" name="is_new" size="30" value="<?php echo I('get.is_new'); ?>" />
+		</p>
+		<p>
+			是否精品：
+	   		<input type="text" name="is_best" size="30" value="<?php echo I('get.is_best'); ?>" />
+		</p>
+		<p>
+			是否上架：1：上架，0：下架：
+	   		<input type="text" name="is_on_sale" size="30" value="<?php echo I('get.is_on_sale'); ?>" />
+		</p>
+		<p>
+			商品类型id：
+	   		<input type="text" name="type_id" size="30" value="<?php echo I('get.type_id'); ?>" />
+		</p>
+		<p>
+			添加时间：
+	   		<input type="text" name="addtime" size="30" value="<?php echo I('get.addtime'); ?>" />
+		</p>
+		<p><input type="submit" value=" 搜索 " class="button" /></p>
+    </form>
+</div>
+<!-- 列表 -->
+<div class="list-div" id="listDiv">
+	<table cellpadding="3" cellspacing="1">
+    	<tr>
+            <th >商品名称</th>
+            <th >市场价</th>
+            <th >本店价</th>
+
+
+            <th >logo原图</th>
+            <th >是否热卖</th>
+            <th >是否新品</th>
+            <th >是否精品</th>
+
+
+            <th >排序数字</th>
+            <th >商品描述</th>
+            <th>库存</th>
+			<th >操作</th>
+        </tr>
+		<?php foreach ($data as $k => $v): ?>            
+			<tr class="tron">
+				<td><?php echo $v['goods_name']; ?></td>
+				<td><?php echo $v['market_price']; ?></td>
+				<td><?php echo $v['jd_price']; ?></td>
+
+
+				<td align="center"><?php showImage($v['logo'], 100);?></td>
+				<td><?php echo $v['is_hot']; ?></td>
+				<td><?php echo $v['is_new']; ?></td>
+				<td><?php echo $v['is_best']; ?></td>
+
+
+				<td><?php echo $v['sort_num']; ?></td>
+				<td><?php echo $v['goods_desc']; ?></td>
+				<td><?php echo $v['ber']; ?></td>
+		        <td align="center">
+		        	<a href="<?php echo U('goods_number?goods_id='.$v['goods_id'].'&p='.I('get.p')); ?>" title="库存">库存</a> |
+		        	<a href="<?php echo U('edit?goods_id='.$v['goods_id'].'&p='.I('get.p')); ?>" title="编辑">编辑</a> |
+	                <a href="<?php echo U('recycle?goods_id='.$v['goods_id'].'&p='.I('get.p')); ?>" onclick="return confirm('确定要放入回收站吗？');" title="放入回收站">放入回收站</a> 
+		        </td>
+	        </tr>
+        <?php endforeach; ?> 
+		<?php if(preg_match('/\d/', $page)): ?>  
+        <tr><td align="right" nowrap="true" colspan="99" height="30"><?php echo $page; ?></td></tr> 
+        <?php endif; ?> 
+	</table>
+</div>
+<script>
+</script>

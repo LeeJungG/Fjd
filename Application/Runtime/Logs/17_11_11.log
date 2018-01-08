@@ -1,0 +1,6 @@
+[ 2017-11-11T22:54:12+08:00 ] 127.0.0.1 /index.php/Admin/Goods/detele/goods_id/2/p/1.html
+ERR: Think\Model:detele方法不存在！
+
+[ 2017-11-11T22:54:25+08:00 ] 127.0.0.1 /index.php/Admin/Goods/detele/goods_id/2/p/1.html
+ERR: Think\Model:detele方法不存在！
+

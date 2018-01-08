@@ -1,0 +1,18 @@
+[ 2017-11-21T11:09:51+08:00 ] 127.0.0.1 /index.php/Admin/Goods/edit/goods_id/14/p/1.html
+ERR: 不存在的图像文件
+
+[ 2017-11-21T11:26:01+08:00 ] 127.0.0.1 /index.php/Admin/Index/lst.html
+ERR: 非法操作:lst
+
+[ 2017-11-21T11:27:24+08:00 ] 127.0.0.1 /index.php/Admin/Index/lst.html
+ERR: 非法操作:lst
+
+[ 2017-11-21T11:27:25+08:00 ] 127.0.0.1 /index.php/Admin/Index/lst.html
+ERR: 非法操作:lst
+
+[ 2017-11-21T16:13:36+08:00 ] 127.0.0.1 /index.php/Admin/Index/categoryList.html
+ERR: 非法操作:categoryList
+
+[ 2017-11-21T20:10:26+08:00 ] 127.0.0.1 /index.php/Admin/Role/edit/role_id/7/p/1.html
+ERR: Think\Model:detele方法不存在！
+
